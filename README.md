@@ -17,3 +17,6 @@ Celem projektu jest stworzenie kompilatora, który tłumaczy kod Pascala na jęz
 
 ### Planowany język implementacji
 - Python
+
+### Generator parsera
+- ANTLR4
