@@ -3,7 +3,7 @@ from antlr4 import *
 from parser.PascalCompilerLexer import PascalCompilerLexer
 from parser.PascalCompilerParser import PascalCompilerParser
 from parser.PascalCompilerVisitor import PascalCompilerVisitor
-
+from parser.PascalErrorListener import ParserErrorListener, PascalSyntaxError
 
 class PascalToCTranslator(PascalCompilerVisitor):
     def __init__(self):

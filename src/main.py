@@ -15,19 +15,30 @@ def main():
     lexer = PascalCompilerLexer(input_stream)
     token_stream = CommonTokenStream(lexer)
     parser = PascalCompilerParser(token_stream)
-    
+    parser.removeErrorListeners()
+    parser.addErrorListener(ParserErrorListener())
     # Budowanie drzewa od reguły startowej
-    tree = parser.pascalProgram()
-    
-    # Uruchomienie translatora
-    translator = PascalToCTranslator()
-    wynik_c = translator.visit(tree)
-    
-    nazwa_output = nazwa_pliku.replace(".pas", ".c")
-    with open(nazwa_output, "w", encoding="utf-8") as f2:
-        f2.write(wynik_c)
+    try:
+        tree = parser.pascalProgram()
+
+        translator = PascalToCTranslator()
+        wynik_c = translator.visit(tree)
+
+        nazwa_output = nazwa_pliku.replace(".pas", ".c")
+
+        with open(nazwa_output, "w", encoding="utf-8") as f2:
+            f2.write(wynik_c)
+
+        print("\nTranslacja zakończona sukcesem.")
+        f2.close()
+
+    except PascalSyntaxError as e:
+        print(e)
+
+    except Exception as e:
+        print(f"\n[NIEOCZEKIWANY BŁĄD]\n{e}")
     f.close()
-    f2.close()
+    
     
 if __name__ == '__main__':
     main()
