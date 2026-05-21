@@ -7,7 +7,7 @@ def main():
     with open(nazwa_pliku, "r", encoding="utf-8") as f:
         pascal_code = f.read()
     
-    print("--- KOD WEJŚCIOWY (PASCAL) ---")
+    print("KOD WEJŚCIOWY (PASCAL)")
     print(pascal_code)
     
     # Uruchomienie parsera ANTLR4
@@ -29,6 +29,8 @@ def main():
         with open(nazwa_output, "w", encoding="utf-8") as f2:
             f2.write(wynik_c)
 
+        print("\nKOD WYJŚCIOWY (C)")
+        print(wynik_c)
         print("\nTranslacja zakończona sukcesem.")
         f2.close()
 
