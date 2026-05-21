@@ -15,7 +15,6 @@ class ParserErrorListener(ErrorListener):
         custom_msg += f"Linia: {line}, kolumna: {column}\n"
         custom_msg += f"Niepoprawny token: '{token}'\n"
 
-        # Customowe bardziej ludzkie komunikaty
         lower_msg = msg.lower()
 
         if "missing 'then'" in lower_msg:
