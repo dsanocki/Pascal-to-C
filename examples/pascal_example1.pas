@@ -9,6 +9,8 @@ begin
 
     if y > 10 then
     begin
+        writeln(y);
         y := y + 1;
     end;
+    writeln(y);
 end.

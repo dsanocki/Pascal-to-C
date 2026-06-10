@@ -23,5 +23,6 @@ int main() {
             }
         }
     }
+    printf("%d", MojaTablica[1]);
     return 0;
 }

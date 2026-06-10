@@ -23,4 +23,5 @@ begin
       end;
     end;
   end;
+  write(MojaTablica[1])
 end.

@@ -10,7 +10,9 @@ int main() {
     x = 5;
     y = x + 10;
     if (y > 10) {
+        printf("%d\n", y);
         y = y + 1;
     }
+    printf("%d\n", y);
     return 0;
 }

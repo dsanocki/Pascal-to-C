@@ -1,9 +1,9 @@
-# Generated from PascalCompiler.g4 by ANTLR 4.13.2
+# Generated from src/parser/PascalCompiler.g4 by ANTLR 4.13.2
 from antlr4 import *
 if "." in __name__:
     from .PascalCompilerParser import PascalCompilerParser
 else:
-    from src.parser.PascalCompilerParser import PascalCompilerParser
+    from PascalCompilerParser import PascalCompilerParser
 
 # This class defines a complete generic visitor for a parse tree produced by PascalCompilerParser.
 
@@ -144,6 +144,16 @@ class PascalCompilerVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by PascalCompilerParser#WriteStmt.
+    def visitWriteStmt(self, ctx:PascalCompilerParser.WriteStmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PascalCompilerParser#WritelnStmt.
+    def visitWritelnStmt(self, ctx:PascalCompilerParser.WritelnStmtContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by PascalCompilerParser#ProcCallStmt.
     def visitProcCallStmt(self, ctx:PascalCompilerParser.ProcCallStmtContext):
         return self.visitChildren(ctx)
@@ -166,6 +176,11 @@ class PascalCompilerVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by PascalCompilerParser#argList.
     def visitArgList(self, ctx:PascalCompilerParser.ArgListContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by PascalCompilerParser#log_expr.
+    def visitLog_expr(self, ctx:PascalCompilerParser.Log_exprContext):
         return self.visitChildren(ctx)
 
 

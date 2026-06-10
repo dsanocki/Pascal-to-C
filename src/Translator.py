@@ -198,9 +198,11 @@ class PascalToCTranslator(PascalCompilerVisitor):
 
         return f"{desig} = {expr};"
 
-
+    def visitLog_expr(self, ctx):
+        return self.visit(ctx.expr())
+    
     def visitIfStmt(self, ctx):
-        cond = self.visit(ctx.expr())
+        cond = self.visit(ctx.log_expr())
         then_stmt = self.visit(ctx.statement(0))
 
         then_block = self.wrap_in_braces(then_stmt)
@@ -218,7 +220,7 @@ class PascalToCTranslator(PascalCompilerVisitor):
         return code
 
     def visitWhileStmt(self, ctx):
-        cond = self.visit(ctx.expr())
+        cond = self.visit(ctx.log_expr())
         stmt = self.visit(ctx.statement())
         
         block = self.wrap_in_braces(stmt)
@@ -240,7 +242,7 @@ class PascalToCTranslator(PascalCompilerVisitor):
 
     def visitRepeatStmt(self, ctx):
         stmts = self.visit(ctx.stmtList())
-        cond = self.visit(ctx.expr())
+        cond = self.visit(ctx.log_expr())
         
         formatted = "{\n"
         if stmts:
@@ -287,6 +289,38 @@ class PascalToCTranslator(PascalCompilerVisitor):
     def visitCaseLabels(self, ctx):
         raw_text = ctx.getText()
         return raw_text.split(',')
+    
+    def visitWriteStmt(self, ctx):
+        return self._handle_print(ctx, newline=False)
+
+    def visitWritelnStmt(self, ctx):
+        return self._handle_print(ctx, newline=True)
+
+    def _handle_print(self, ctx, newline):
+        args = []
+        fmt = ""
+        
+        if ctx.argList():
+            for expr in ctx.argList().expr():
+                c_expr = str(self.visit(expr))
+                if c_expr.startswith('"') and c_expr.endswith('"'):
+                    fmt += c_expr[1:-1]
+                elif c_expr in ['true', 'false']:
+                    fmt += c_expr
+                else:
+                    if "." in c_expr and not ("(" in c_expr or "[" in c_expr):
+                        fmt += "%f"
+                    else:
+                        fmt += "%d"
+                    args.append(c_expr)
+        
+        if newline:
+            fmt += "\\n"
+            
+        if args:
+            return f'printf("{fmt}", {", ".join(args)});'
+        else:
+            return f'printf("{fmt}");'
 
     def visitProcCallStmt(self, ctx):
         return f"{self.visit(ctx.designator())};"

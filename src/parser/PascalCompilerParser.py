@@ -1,4 +1,4 @@
-# Generated from PascalCompiler.g4 by ANTLR 4.13.2
+# Generated from src/parser/PascalCompiler.g4 by ANTLR 4.13.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -10,126 +10,133 @@ else:
 
 def serializedATN():
     return [
-        4,1,59,331,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        4,1,61,347,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
         6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
         2,14,7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,
-        7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,1,0,1,0,1,
-        0,1,0,1,0,1,0,1,1,1,1,1,1,1,2,3,2,63,8,2,1,2,3,2,66,8,2,1,2,1,2,
-        1,3,1,3,4,3,72,8,3,11,3,12,3,73,1,4,1,4,1,4,3,4,79,8,4,1,4,1,4,1,
-        4,1,5,1,5,4,5,86,8,5,11,5,12,5,87,1,6,1,6,1,6,1,6,1,6,1,7,1,7,1,
-        7,5,7,98,8,7,10,7,12,7,101,9,7,1,8,1,8,1,8,1,8,1,8,1,8,1,8,3,8,110,
-        8,8,1,9,1,9,1,9,1,9,1,9,5,9,117,8,9,10,9,12,9,120,9,9,1,9,1,9,1,
-        9,1,9,1,10,3,10,127,8,10,1,10,1,10,1,10,3,10,132,8,10,1,10,1,10,
-        1,11,1,11,1,12,5,12,139,8,12,10,12,12,12,142,9,12,1,13,1,13,1,13,
-        1,13,1,13,1,14,1,14,1,14,3,14,152,8,14,1,14,1,14,1,14,3,14,157,8,
-        14,1,14,1,14,3,14,161,8,14,1,15,1,15,1,15,1,15,5,15,167,8,15,10,
-        15,12,15,170,9,15,1,15,1,15,1,16,3,16,175,8,16,1,16,1,16,1,16,1,
-        16,1,17,1,17,1,17,1,17,1,17,5,17,186,8,17,10,17,12,17,189,9,17,1,
-        17,1,17,5,17,193,8,17,10,17,12,17,196,9,17,1,17,1,17,1,17,3,17,201,
-        8,17,1,17,3,17,204,8,17,3,17,206,8,17,1,18,1,18,1,18,1,18,1,19,3,
-        19,213,8,19,1,19,1,19,3,19,217,8,19,5,19,219,8,19,10,19,12,19,222,
-        9,19,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,3,20,
-        235,8,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,
-        1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,4,20,
-        260,8,20,11,20,12,20,261,1,20,1,20,1,20,3,20,267,8,20,3,20,269,8,
-        20,1,20,1,20,1,20,3,20,274,8,20,1,21,1,21,1,21,1,21,1,21,1,22,3,
-        22,282,8,22,1,22,1,22,1,22,1,22,3,22,288,8,22,1,22,5,22,291,8,22,
-        10,22,12,22,294,9,22,1,23,1,23,1,24,1,24,1,24,5,24,301,8,24,10,24,
-        12,24,304,9,24,1,25,1,25,1,25,1,25,1,25,1,25,1,25,1,25,1,25,3,25,
-        315,8,25,1,25,1,25,1,25,1,25,1,25,1,25,1,25,1,25,1,25,5,25,326,8,
-        25,10,25,12,25,329,9,25,1,25,0,1,50,26,0,2,4,6,8,10,12,14,16,18,
-        20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,0,7,1,0,33,34,1,
-        0,12,13,1,0,52,56,2,0,33,34,41,41,1,0,35,39,2,0,33,34,40,40,1,0,
-        27,32,354,0,52,1,0,0,0,2,58,1,0,0,0,4,62,1,0,0,0,6,69,1,0,0,0,8,
-        75,1,0,0,0,10,83,1,0,0,0,12,89,1,0,0,0,14,94,1,0,0,0,16,109,1,0,
-        0,0,18,111,1,0,0,0,20,126,1,0,0,0,22,135,1,0,0,0,24,140,1,0,0,0,
-        26,143,1,0,0,0,28,160,1,0,0,0,30,162,1,0,0,0,32,174,1,0,0,0,34,205,
-        1,0,0,0,36,207,1,0,0,0,38,212,1,0,0,0,40,273,1,0,0,0,42,275,1,0,
-        0,0,44,281,1,0,0,0,46,295,1,0,0,0,48,297,1,0,0,0,50,314,1,0,0,0,
-        52,53,5,1,0,0,53,54,5,57,0,0,54,55,5,43,0,0,55,56,3,2,1,0,56,57,
-        5,46,0,0,57,1,1,0,0,0,58,59,3,4,2,0,59,60,3,36,18,0,60,3,1,0,0,0,
-        61,63,3,6,3,0,62,61,1,0,0,0,62,63,1,0,0,0,63,65,1,0,0,0,64,66,3,
-        10,5,0,65,64,1,0,0,0,65,66,1,0,0,0,66,67,1,0,0,0,67,68,3,24,12,0,
-        68,5,1,0,0,0,69,71,5,2,0,0,70,72,3,8,4,0,71,70,1,0,0,0,72,73,1,0,
-        0,0,73,71,1,0,0,0,73,74,1,0,0,0,74,7,1,0,0,0,75,76,5,57,0,0,76,78,
-        5,27,0,0,77,79,3,22,11,0,78,77,1,0,0,0,78,79,1,0,0,0,79,80,1,0,0,
-        0,80,81,3,46,23,0,81,82,5,43,0,0,82,9,1,0,0,0,83,85,5,3,0,0,84,86,
-        3,12,6,0,85,84,1,0,0,0,86,87,1,0,0,0,87,85,1,0,0,0,87,88,1,0,0,0,
-        88,11,1,0,0,0,89,90,3,14,7,0,90,91,5,51,0,0,91,92,3,16,8,0,92,93,
-        5,43,0,0,93,13,1,0,0,0,94,99,5,57,0,0,95,96,5,44,0,0,96,98,5,57,
-        0,0,97,95,1,0,0,0,98,101,1,0,0,0,99,97,1,0,0,0,99,100,1,0,0,0,100,
-        15,1,0,0,0,101,99,1,0,0,0,102,110,5,21,0,0,103,110,5,22,0,0,104,
-        110,5,23,0,0,105,110,5,24,0,0,106,110,5,25,0,0,107,110,5,26,0,0,
-        108,110,3,18,9,0,109,102,1,0,0,0,109,103,1,0,0,0,109,104,1,0,0,0,
-        109,105,1,0,0,0,109,106,1,0,0,0,109,107,1,0,0,0,109,108,1,0,0,0,
-        110,17,1,0,0,0,111,112,5,20,0,0,112,113,5,49,0,0,113,118,3,20,10,
-        0,114,115,5,44,0,0,115,117,3,20,10,0,116,114,1,0,0,0,117,120,1,0,
-        0,0,118,116,1,0,0,0,118,119,1,0,0,0,119,121,1,0,0,0,120,118,1,0,
-        0,0,121,122,5,50,0,0,122,123,5,19,0,0,123,124,3,16,8,0,124,19,1,
-        0,0,0,125,127,3,22,11,0,126,125,1,0,0,0,126,127,1,0,0,0,127,128,
-        1,0,0,0,128,129,3,46,23,0,129,131,5,45,0,0,130,132,3,22,11,0,131,
-        130,1,0,0,0,131,132,1,0,0,0,132,133,1,0,0,0,133,134,3,46,23,0,134,
-        21,1,0,0,0,135,136,7,0,0,0,136,23,1,0,0,0,137,139,3,26,13,0,138,
-        137,1,0,0,0,139,142,1,0,0,0,140,138,1,0,0,0,140,141,1,0,0,0,141,
-        25,1,0,0,0,142,140,1,0,0,0,143,144,3,28,14,0,144,145,5,43,0,0,145,
-        146,3,2,1,0,146,147,5,43,0,0,147,27,1,0,0,0,148,149,5,14,0,0,149,
-        151,5,57,0,0,150,152,3,30,15,0,151,150,1,0,0,0,151,152,1,0,0,0,152,
-        161,1,0,0,0,153,154,5,15,0,0,154,156,5,57,0,0,155,157,3,30,15,0,
-        156,155,1,0,0,0,156,157,1,0,0,0,157,158,1,0,0,0,158,159,5,51,0,0,
-        159,161,3,16,8,0,160,148,1,0,0,0,160,153,1,0,0,0,161,29,1,0,0,0,
-        162,163,5,47,0,0,163,168,3,32,16,0,164,165,5,43,0,0,165,167,3,32,
-        16,0,166,164,1,0,0,0,167,170,1,0,0,0,168,166,1,0,0,0,168,169,1,0,
-        0,0,169,171,1,0,0,0,170,168,1,0,0,0,171,172,5,48,0,0,172,31,1,0,
-        0,0,173,175,5,3,0,0,174,173,1,0,0,0,174,175,1,0,0,0,175,176,1,0,
-        0,0,176,177,3,14,7,0,177,178,5,51,0,0,178,179,3,16,8,0,179,33,1,
-        0,0,0,180,194,5,57,0,0,181,182,5,49,0,0,182,187,3,50,25,0,183,184,
-        5,44,0,0,184,186,3,50,25,0,185,183,1,0,0,0,186,189,1,0,0,0,187,185,
-        1,0,0,0,187,188,1,0,0,0,188,190,1,0,0,0,189,187,1,0,0,0,190,191,
-        5,50,0,0,191,193,1,0,0,0,192,181,1,0,0,0,193,196,1,0,0,0,194,192,
-        1,0,0,0,194,195,1,0,0,0,195,206,1,0,0,0,196,194,1,0,0,0,197,203,
-        5,57,0,0,198,200,5,47,0,0,199,201,3,48,24,0,200,199,1,0,0,0,200,
-        201,1,0,0,0,201,202,1,0,0,0,202,204,5,48,0,0,203,198,1,0,0,0,203,
-        204,1,0,0,0,204,206,1,0,0,0,205,180,1,0,0,0,205,197,1,0,0,0,206,
-        35,1,0,0,0,207,208,5,4,0,0,208,209,3,38,19,0,209,210,5,5,0,0,210,
-        37,1,0,0,0,211,213,3,40,20,0,212,211,1,0,0,0,212,213,1,0,0,0,213,
-        220,1,0,0,0,214,216,5,43,0,0,215,217,3,40,20,0,216,215,1,0,0,0,216,
-        217,1,0,0,0,217,219,1,0,0,0,218,214,1,0,0,0,219,222,1,0,0,0,220,
-        218,1,0,0,0,220,221,1,0,0,0,221,39,1,0,0,0,222,220,1,0,0,0,223,224,
-        3,34,17,0,224,225,5,42,0,0,225,226,3,50,25,0,226,274,1,0,0,0,227,
-        274,3,36,18,0,228,229,5,6,0,0,229,230,3,50,25,0,230,231,5,7,0,0,
-        231,234,3,40,20,0,232,233,5,8,0,0,233,235,3,40,20,0,234,232,1,0,
-        0,0,234,235,1,0,0,0,235,274,1,0,0,0,236,237,5,9,0,0,237,238,3,50,
-        25,0,238,239,5,10,0,0,239,240,3,40,20,0,240,274,1,0,0,0,241,242,
-        5,11,0,0,242,243,5,57,0,0,243,244,5,42,0,0,244,245,3,50,25,0,245,
-        246,7,1,0,0,246,247,3,50,25,0,247,248,5,10,0,0,248,249,3,40,20,0,
-        249,274,1,0,0,0,250,251,5,16,0,0,251,252,3,38,19,0,252,253,5,17,
-        0,0,253,254,3,50,25,0,254,274,1,0,0,0,255,256,5,18,0,0,256,257,3,
-        50,25,0,257,259,5,19,0,0,258,260,3,42,21,0,259,258,1,0,0,0,260,261,
-        1,0,0,0,261,259,1,0,0,0,261,262,1,0,0,0,262,268,1,0,0,0,263,264,
-        5,8,0,0,264,266,3,40,20,0,265,267,5,43,0,0,266,265,1,0,0,0,266,267,
-        1,0,0,0,267,269,1,0,0,0,268,263,1,0,0,0,268,269,1,0,0,0,269,270,
-        1,0,0,0,270,271,5,5,0,0,271,274,1,0,0,0,272,274,3,34,17,0,273,223,
-        1,0,0,0,273,227,1,0,0,0,273,228,1,0,0,0,273,236,1,0,0,0,273,241,
-        1,0,0,0,273,250,1,0,0,0,273,255,1,0,0,0,273,272,1,0,0,0,274,41,1,
-        0,0,0,275,276,3,44,22,0,276,277,5,51,0,0,277,278,3,40,20,0,278,279,
-        5,43,0,0,279,43,1,0,0,0,280,282,3,22,11,0,281,280,1,0,0,0,281,282,
-        1,0,0,0,282,283,1,0,0,0,283,284,3,46,23,0,284,292,1,0,0,0,285,287,
-        5,44,0,0,286,288,3,22,11,0,287,286,1,0,0,0,287,288,1,0,0,0,288,289,
-        1,0,0,0,289,291,3,46,23,0,290,285,1,0,0,0,291,294,1,0,0,0,292,290,
-        1,0,0,0,292,293,1,0,0,0,293,45,1,0,0,0,294,292,1,0,0,0,295,296,7,
-        2,0,0,296,47,1,0,0,0,297,302,3,50,25,0,298,299,5,44,0,0,299,301,
-        3,50,25,0,300,298,1,0,0,0,301,304,1,0,0,0,302,300,1,0,0,0,302,303,
-        1,0,0,0,303,49,1,0,0,0,304,302,1,0,0,0,305,306,6,25,-1,0,306,307,
-        5,47,0,0,307,308,3,50,25,0,308,309,5,48,0,0,309,315,1,0,0,0,310,
-        311,7,3,0,0,311,315,3,50,25,6,312,315,3,46,23,0,313,315,3,34,17,
-        0,314,305,1,0,0,0,314,310,1,0,0,0,314,312,1,0,0,0,314,313,1,0,0,
-        0,315,327,1,0,0,0,316,317,10,5,0,0,317,318,7,4,0,0,318,326,3,50,
-        25,6,319,320,10,4,0,0,320,321,7,5,0,0,321,326,3,50,25,5,322,323,
-        10,3,0,0,323,324,7,6,0,0,324,326,3,50,25,4,325,316,1,0,0,0,325,319,
-        1,0,0,0,325,322,1,0,0,0,326,329,1,0,0,0,327,325,1,0,0,0,327,328,
-        1,0,0,0,328,51,1,0,0,0,329,327,1,0,0,0,36,62,65,73,78,87,99,109,
-        118,126,131,140,151,156,160,168,174,187,194,200,203,205,212,216,
-        220,234,261,266,268,273,281,287,292,302,314,325,327
+        7,20,2,21,7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,
+        1,0,1,0,1,0,1,0,1,0,1,0,1,1,1,1,1,1,1,2,3,2,65,8,2,1,2,3,2,68,8,
+        2,1,2,1,2,1,3,1,3,4,3,74,8,3,11,3,12,3,75,1,4,1,4,1,4,3,4,81,8,4,
+        1,4,1,4,1,4,1,5,1,5,4,5,88,8,5,11,5,12,5,89,1,6,1,6,1,6,1,6,1,6,
+        1,7,1,7,1,7,5,7,100,8,7,10,7,12,7,103,9,7,1,8,1,8,1,8,1,8,1,8,1,
+        8,1,8,3,8,112,8,8,1,9,1,9,1,9,1,9,1,9,5,9,119,8,9,10,9,12,9,122,
+        9,9,1,9,1,9,1,9,1,9,1,10,3,10,129,8,10,1,10,1,10,1,10,3,10,134,8,
+        10,1,10,1,10,1,11,1,11,1,12,5,12,141,8,12,10,12,12,12,144,9,12,1,
+        13,1,13,1,13,1,13,1,13,1,14,1,14,1,14,3,14,154,8,14,1,14,1,14,1,
+        14,3,14,159,8,14,1,14,1,14,3,14,163,8,14,1,15,1,15,1,15,1,15,5,15,
+        169,8,15,10,15,12,15,172,9,15,1,15,1,15,1,16,3,16,177,8,16,1,16,
+        1,16,1,16,1,16,1,17,1,17,1,17,1,17,1,17,5,17,188,8,17,10,17,12,17,
+        191,9,17,1,17,1,17,5,17,195,8,17,10,17,12,17,198,9,17,1,17,1,17,
+        1,17,3,17,203,8,17,1,17,3,17,206,8,17,3,17,208,8,17,1,18,1,18,1,
+        18,1,18,1,19,3,19,215,8,19,1,19,1,19,3,19,219,8,19,5,19,221,8,19,
+        10,19,12,19,224,9,19,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,
+        1,20,1,20,3,20,237,8,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,
+        1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,
+        1,20,1,20,4,20,262,8,20,11,20,12,20,263,1,20,1,20,1,20,3,20,269,
+        8,20,3,20,271,8,20,1,20,1,20,1,20,1,20,1,20,3,20,278,8,20,1,20,1,
+        20,1,20,1,20,3,20,284,8,20,1,20,1,20,3,20,288,8,20,1,21,1,21,1,21,
+        1,21,1,21,1,22,3,22,296,8,22,1,22,1,22,1,22,1,22,3,22,302,8,22,1,
+        22,5,22,305,8,22,10,22,12,22,308,9,22,1,23,1,23,1,24,1,24,1,24,5,
+        24,315,8,24,10,24,12,24,318,9,24,1,25,1,25,1,26,1,26,1,26,1,26,1,
+        26,1,26,1,26,1,26,1,26,3,26,331,8,26,1,26,1,26,1,26,1,26,1,26,1,
+        26,1,26,1,26,1,26,5,26,342,8,26,10,26,12,26,345,9,26,1,26,0,1,52,
+        27,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,
+        44,46,48,50,52,0,7,1,0,35,36,1,0,12,13,1,0,54,58,2,0,35,36,43,43,
+        1,0,37,41,2,0,35,36,42,42,1,0,29,34,373,0,54,1,0,0,0,2,60,1,0,0,
+        0,4,64,1,0,0,0,6,71,1,0,0,0,8,77,1,0,0,0,10,85,1,0,0,0,12,91,1,0,
+        0,0,14,96,1,0,0,0,16,111,1,0,0,0,18,113,1,0,0,0,20,128,1,0,0,0,22,
+        137,1,0,0,0,24,142,1,0,0,0,26,145,1,0,0,0,28,162,1,0,0,0,30,164,
+        1,0,0,0,32,176,1,0,0,0,34,207,1,0,0,0,36,209,1,0,0,0,38,214,1,0,
+        0,0,40,287,1,0,0,0,42,289,1,0,0,0,44,295,1,0,0,0,46,309,1,0,0,0,
+        48,311,1,0,0,0,50,319,1,0,0,0,52,330,1,0,0,0,54,55,5,1,0,0,55,56,
+        5,59,0,0,56,57,5,45,0,0,57,58,3,2,1,0,58,59,5,48,0,0,59,1,1,0,0,
+        0,60,61,3,4,2,0,61,62,3,36,18,0,62,3,1,0,0,0,63,65,3,6,3,0,64,63,
+        1,0,0,0,64,65,1,0,0,0,65,67,1,0,0,0,66,68,3,10,5,0,67,66,1,0,0,0,
+        67,68,1,0,0,0,68,69,1,0,0,0,69,70,3,24,12,0,70,5,1,0,0,0,71,73,5,
+        2,0,0,72,74,3,8,4,0,73,72,1,0,0,0,74,75,1,0,0,0,75,73,1,0,0,0,75,
+        76,1,0,0,0,76,7,1,0,0,0,77,78,5,59,0,0,78,80,5,29,0,0,79,81,3,22,
+        11,0,80,79,1,0,0,0,80,81,1,0,0,0,81,82,1,0,0,0,82,83,3,46,23,0,83,
+        84,5,45,0,0,84,9,1,0,0,0,85,87,5,3,0,0,86,88,3,12,6,0,87,86,1,0,
+        0,0,88,89,1,0,0,0,89,87,1,0,0,0,89,90,1,0,0,0,90,11,1,0,0,0,91,92,
+        3,14,7,0,92,93,5,53,0,0,93,94,3,16,8,0,94,95,5,45,0,0,95,13,1,0,
+        0,0,96,101,5,59,0,0,97,98,5,46,0,0,98,100,5,59,0,0,99,97,1,0,0,0,
+        100,103,1,0,0,0,101,99,1,0,0,0,101,102,1,0,0,0,102,15,1,0,0,0,103,
+        101,1,0,0,0,104,112,5,23,0,0,105,112,5,24,0,0,106,112,5,25,0,0,107,
+        112,5,26,0,0,108,112,5,27,0,0,109,112,5,28,0,0,110,112,3,18,9,0,
+        111,104,1,0,0,0,111,105,1,0,0,0,111,106,1,0,0,0,111,107,1,0,0,0,
+        111,108,1,0,0,0,111,109,1,0,0,0,111,110,1,0,0,0,112,17,1,0,0,0,113,
+        114,5,20,0,0,114,115,5,51,0,0,115,120,3,20,10,0,116,117,5,46,0,0,
+        117,119,3,20,10,0,118,116,1,0,0,0,119,122,1,0,0,0,120,118,1,0,0,
+        0,120,121,1,0,0,0,121,123,1,0,0,0,122,120,1,0,0,0,123,124,5,52,0,
+        0,124,125,5,19,0,0,125,126,3,16,8,0,126,19,1,0,0,0,127,129,3,22,
+        11,0,128,127,1,0,0,0,128,129,1,0,0,0,129,130,1,0,0,0,130,131,3,46,
+        23,0,131,133,5,47,0,0,132,134,3,22,11,0,133,132,1,0,0,0,133,134,
+        1,0,0,0,134,135,1,0,0,0,135,136,3,46,23,0,136,21,1,0,0,0,137,138,
+        7,0,0,0,138,23,1,0,0,0,139,141,3,26,13,0,140,139,1,0,0,0,141,144,
+        1,0,0,0,142,140,1,0,0,0,142,143,1,0,0,0,143,25,1,0,0,0,144,142,1,
+        0,0,0,145,146,3,28,14,0,146,147,5,45,0,0,147,148,3,2,1,0,148,149,
+        5,45,0,0,149,27,1,0,0,0,150,151,5,14,0,0,151,153,5,59,0,0,152,154,
+        3,30,15,0,153,152,1,0,0,0,153,154,1,0,0,0,154,163,1,0,0,0,155,156,
+        5,15,0,0,156,158,5,59,0,0,157,159,3,30,15,0,158,157,1,0,0,0,158,
+        159,1,0,0,0,159,160,1,0,0,0,160,161,5,53,0,0,161,163,3,16,8,0,162,
+        150,1,0,0,0,162,155,1,0,0,0,163,29,1,0,0,0,164,165,5,49,0,0,165,
+        170,3,32,16,0,166,167,5,45,0,0,167,169,3,32,16,0,168,166,1,0,0,0,
+        169,172,1,0,0,0,170,168,1,0,0,0,170,171,1,0,0,0,171,173,1,0,0,0,
+        172,170,1,0,0,0,173,174,5,50,0,0,174,31,1,0,0,0,175,177,5,3,0,0,
+        176,175,1,0,0,0,176,177,1,0,0,0,177,178,1,0,0,0,178,179,3,14,7,0,
+        179,180,5,53,0,0,180,181,3,16,8,0,181,33,1,0,0,0,182,196,5,59,0,
+        0,183,184,5,51,0,0,184,189,3,52,26,0,185,186,5,46,0,0,186,188,3,
+        52,26,0,187,185,1,0,0,0,188,191,1,0,0,0,189,187,1,0,0,0,189,190,
+        1,0,0,0,190,192,1,0,0,0,191,189,1,0,0,0,192,193,5,52,0,0,193,195,
+        1,0,0,0,194,183,1,0,0,0,195,198,1,0,0,0,196,194,1,0,0,0,196,197,
+        1,0,0,0,197,208,1,0,0,0,198,196,1,0,0,0,199,205,5,59,0,0,200,202,
+        5,49,0,0,201,203,3,48,24,0,202,201,1,0,0,0,202,203,1,0,0,0,203,204,
+        1,0,0,0,204,206,5,50,0,0,205,200,1,0,0,0,205,206,1,0,0,0,206,208,
+        1,0,0,0,207,182,1,0,0,0,207,199,1,0,0,0,208,35,1,0,0,0,209,210,5,
+        4,0,0,210,211,3,38,19,0,211,212,5,5,0,0,212,37,1,0,0,0,213,215,3,
+        40,20,0,214,213,1,0,0,0,214,215,1,0,0,0,215,222,1,0,0,0,216,218,
+        5,45,0,0,217,219,3,40,20,0,218,217,1,0,0,0,218,219,1,0,0,0,219,221,
+        1,0,0,0,220,216,1,0,0,0,221,224,1,0,0,0,222,220,1,0,0,0,222,223,
+        1,0,0,0,223,39,1,0,0,0,224,222,1,0,0,0,225,226,3,34,17,0,226,227,
+        5,44,0,0,227,228,3,52,26,0,228,288,1,0,0,0,229,288,3,36,18,0,230,
+        231,5,6,0,0,231,232,3,50,25,0,232,233,5,7,0,0,233,236,3,40,20,0,
+        234,235,5,8,0,0,235,237,3,40,20,0,236,234,1,0,0,0,236,237,1,0,0,
+        0,237,288,1,0,0,0,238,239,5,9,0,0,239,240,3,50,25,0,240,241,5,10,
+        0,0,241,242,3,40,20,0,242,288,1,0,0,0,243,244,5,11,0,0,244,245,5,
+        59,0,0,245,246,5,44,0,0,246,247,3,52,26,0,247,248,7,1,0,0,248,249,
+        3,52,26,0,249,250,5,10,0,0,250,251,3,40,20,0,251,288,1,0,0,0,252,
+        253,5,16,0,0,253,254,3,38,19,0,254,255,5,17,0,0,255,256,3,50,25,
+        0,256,288,1,0,0,0,257,258,5,18,0,0,258,259,3,52,26,0,259,261,5,19,
+        0,0,260,262,3,42,21,0,261,260,1,0,0,0,262,263,1,0,0,0,263,261,1,
+        0,0,0,263,264,1,0,0,0,264,270,1,0,0,0,265,266,5,8,0,0,266,268,3,
+        40,20,0,267,269,5,45,0,0,268,267,1,0,0,0,268,269,1,0,0,0,269,271,
+        1,0,0,0,270,265,1,0,0,0,270,271,1,0,0,0,271,272,1,0,0,0,272,273,
+        5,5,0,0,273,288,1,0,0,0,274,275,5,21,0,0,275,277,5,49,0,0,276,278,
+        3,48,24,0,277,276,1,0,0,0,277,278,1,0,0,0,278,279,1,0,0,0,279,288,
+        5,50,0,0,280,281,5,22,0,0,281,283,5,49,0,0,282,284,3,48,24,0,283,
+        282,1,0,0,0,283,284,1,0,0,0,284,285,1,0,0,0,285,288,5,50,0,0,286,
+        288,3,34,17,0,287,225,1,0,0,0,287,229,1,0,0,0,287,230,1,0,0,0,287,
+        238,1,0,0,0,287,243,1,0,0,0,287,252,1,0,0,0,287,257,1,0,0,0,287,
+        274,1,0,0,0,287,280,1,0,0,0,287,286,1,0,0,0,288,41,1,0,0,0,289,290,
+        3,44,22,0,290,291,5,53,0,0,291,292,3,40,20,0,292,293,5,45,0,0,293,
+        43,1,0,0,0,294,296,3,22,11,0,295,294,1,0,0,0,295,296,1,0,0,0,296,
+        297,1,0,0,0,297,298,3,46,23,0,298,306,1,0,0,0,299,301,5,46,0,0,300,
+        302,3,22,11,0,301,300,1,0,0,0,301,302,1,0,0,0,302,303,1,0,0,0,303,
+        305,3,46,23,0,304,299,1,0,0,0,305,308,1,0,0,0,306,304,1,0,0,0,306,
+        307,1,0,0,0,307,45,1,0,0,0,308,306,1,0,0,0,309,310,7,2,0,0,310,47,
+        1,0,0,0,311,316,3,52,26,0,312,313,5,46,0,0,313,315,3,52,26,0,314,
+        312,1,0,0,0,315,318,1,0,0,0,316,314,1,0,0,0,316,317,1,0,0,0,317,
+        49,1,0,0,0,318,316,1,0,0,0,319,320,3,52,26,0,320,51,1,0,0,0,321,
+        322,6,26,-1,0,322,323,5,49,0,0,323,324,3,52,26,0,324,325,5,50,0,
+        0,325,331,1,0,0,0,326,327,7,3,0,0,327,331,3,52,26,6,328,331,3,46,
+        23,0,329,331,3,34,17,0,330,321,1,0,0,0,330,326,1,0,0,0,330,328,1,
+        0,0,0,330,329,1,0,0,0,331,343,1,0,0,0,332,333,10,5,0,0,333,334,7,
+        4,0,0,334,342,3,52,26,6,335,336,10,4,0,0,336,337,7,5,0,0,337,342,
+        3,52,26,5,338,339,10,3,0,0,339,340,7,6,0,0,340,342,3,52,26,4,341,
+        332,1,0,0,0,341,335,1,0,0,0,341,338,1,0,0,0,342,345,1,0,0,0,343,
+        341,1,0,0,0,343,344,1,0,0,0,344,53,1,0,0,0,345,343,1,0,0,0,38,64,
+        67,75,80,89,101,111,120,128,133,142,153,158,162,170,176,189,196,
+        202,205,207,214,218,222,236,263,268,270,277,283,287,295,301,306,
+        316,330,341,343
     ]
 
 class PascalCompilerParser ( Parser ):
@@ -146,25 +153,26 @@ class PascalCompilerParser ( Parser ):
                      "'end'", "'if'", "'then'", "'else'", "'while'", "'do'", 
                      "'for'", "'to'", "'downto'", "'procedure'", "'function'", 
                      "'repeat'", "'until'", "'case'", "'of'", "'array'", 
-                     "'integer'", "'real'", "'boolean'", "'char'", "'longint'", 
-                     "'string'", "'='", "'<>'", "'<='", "'<'", "'>='", "'>'", 
-                     "'+'", "'-'", "'*'", "'/'", "'div'", "'mod'", "'and'", 
-                     "'or'", "'not'", "':='", "';'", "','", "'..'", "'.'", 
-                     "'('", "')'", "'['", "']'", "':'" ]
+                     "'write'", "'writeln'", "'integer'", "'real'", "'boolean'", 
+                     "'char'", "'longint'", "'string'", "'='", "'<>'", "'<='", 
+                     "'<'", "'>='", "'>'", "'+'", "'-'", "'*'", "'/'", "'div'", 
+                     "'mod'", "'and'", "'or'", "'not'", "':='", "';'", "','", 
+                     "'..'", "'.'", "'('", "')'", "'['", "']'", "':'" ]
 
     symbolicNames = [ "<INVALID>", "KW_PROGRAM", "KW_CONST", "KW_VAR", "KW_BEGIN", 
                       "KW_END", "KW_IF", "KW_THEN", "KW_ELSE", "KW_WHILE", 
                       "KW_DO", "KW_FOR", "KW_TO", "KW_DOWNTO", "KW_PROCEDURE", 
                       "KW_FUNCTION", "KW_REPEAT", "KW_UNTIL", "KW_CASE", 
-                      "KW_OF", "KW_ARRAY", "TYPE_INT", "TYPE_REAL", "TYPE_BOOL", 
-                      "TYPE_CHAR", "TYPE_LONG", "TYPE_STRING", "OP_EQ", 
-                      "OP_NE", "OP_LE", "OP_LT", "OP_GE", "OP_GT", "OP_ADD", 
-                      "OP_SUB", "OP_MUL", "OP_DIV", "OP_DIV_INT", "OP_MOD", 
-                      "OP_AND", "OP_OR", "OP_NOT", "SYM_ASSIGN", "SYM_SEMI", 
-                      "SYM_COMMA", "SYM_DOTDOT", "SYM_DOT", "SYM_LPAREN", 
-                      "SYM_RPAREN", "SYM_LBRACKET", "SYM_RBRACKET", "SYM_COLON", 
-                      "CHAR_LIT", "STRING_LIT", "BOOL_CONST", "REAL_NUMBER", 
-                      "INT_NUMBER", "IDENTIFIER", "COMMENT", "WS" ]
+                      "KW_OF", "KW_ARRAY", "KW_WRITE", "KW_WRITELN", "TYPE_INT", 
+                      "TYPE_REAL", "TYPE_BOOL", "TYPE_CHAR", "TYPE_LONG", 
+                      "TYPE_STRING", "OP_EQ", "OP_NE", "OP_LE", "OP_LT", 
+                      "OP_GE", "OP_GT", "OP_ADD", "OP_SUB", "OP_MUL", "OP_DIV", 
+                      "OP_DIV_INT", "OP_MOD", "OP_AND", "OP_OR", "OP_NOT", 
+                      "SYM_ASSIGN", "SYM_SEMI", "SYM_COMMA", "SYM_DOTDOT", 
+                      "SYM_DOT", "SYM_LPAREN", "SYM_RPAREN", "SYM_LBRACKET", 
+                      "SYM_RBRACKET", "SYM_COLON", "CHAR_LIT", "STRING_LIT", 
+                      "BOOL_CONST", "REAL_NUMBER", "INT_NUMBER", "IDENTIFIER", 
+                      "COMMENT", "WS" ]
 
     RULE_pascalProgram = 0
     RULE_executionBlock = 1
@@ -191,14 +199,16 @@ class PascalCompilerParser ( Parser ):
     RULE_caseLabels = 22
     RULE_constantValue = 23
     RULE_argList = 24
-    RULE_expr = 25
+    RULE_log_expr = 25
+    RULE_expr = 26
 
     ruleNames =  [ "pascalProgram", "executionBlock", "declSection", "constDeclPart", 
                    "constDecl", "varDeclPart", "varDecl", "idList", "dataType", 
                    "arrayType", "idxRange", "sign", "subprogramDecls", "subprogramDecl", 
                    "subprogramHeader", "paramList", "paramGroup", "designator", 
                    "compoundStmt", "stmtList", "statement", "caseItem", 
-                   "caseLabels", "constantValue", "argList", "expr" ]
+                   "caseLabels", "constantValue", "argList", "log_expr", 
+                   "expr" ]
 
     EOF = Token.EOF
     KW_PROGRAM=1
@@ -221,45 +231,47 @@ class PascalCompilerParser ( Parser ):
     KW_CASE=18
     KW_OF=19
     KW_ARRAY=20
-    TYPE_INT=21
-    TYPE_REAL=22
-    TYPE_BOOL=23
-    TYPE_CHAR=24
-    TYPE_LONG=25
-    TYPE_STRING=26
-    OP_EQ=27
-    OP_NE=28
-    OP_LE=29
-    OP_LT=30
-    OP_GE=31
-    OP_GT=32
-    OP_ADD=33
-    OP_SUB=34
-    OP_MUL=35
-    OP_DIV=36
-    OP_DIV_INT=37
-    OP_MOD=38
-    OP_AND=39
-    OP_OR=40
-    OP_NOT=41
-    SYM_ASSIGN=42
-    SYM_SEMI=43
-    SYM_COMMA=44
-    SYM_DOTDOT=45
-    SYM_DOT=46
-    SYM_LPAREN=47
-    SYM_RPAREN=48
-    SYM_LBRACKET=49
-    SYM_RBRACKET=50
-    SYM_COLON=51
-    CHAR_LIT=52
-    STRING_LIT=53
-    BOOL_CONST=54
-    REAL_NUMBER=55
-    INT_NUMBER=56
-    IDENTIFIER=57
-    COMMENT=58
-    WS=59
+    KW_WRITE=21
+    KW_WRITELN=22
+    TYPE_INT=23
+    TYPE_REAL=24
+    TYPE_BOOL=25
+    TYPE_CHAR=26
+    TYPE_LONG=27
+    TYPE_STRING=28
+    OP_EQ=29
+    OP_NE=30
+    OP_LE=31
+    OP_LT=32
+    OP_GE=33
+    OP_GT=34
+    OP_ADD=35
+    OP_SUB=36
+    OP_MUL=37
+    OP_DIV=38
+    OP_DIV_INT=39
+    OP_MOD=40
+    OP_AND=41
+    OP_OR=42
+    OP_NOT=43
+    SYM_ASSIGN=44
+    SYM_SEMI=45
+    SYM_COMMA=46
+    SYM_DOTDOT=47
+    SYM_DOT=48
+    SYM_LPAREN=49
+    SYM_RPAREN=50
+    SYM_LBRACKET=51
+    SYM_RBRACKET=52
+    SYM_COLON=53
+    CHAR_LIT=54
+    STRING_LIT=55
+    BOOL_CONST=56
+    REAL_NUMBER=57
+    INT_NUMBER=58
+    IDENTIFIER=59
+    COMMENT=60
+    WS=61
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -319,15 +331,15 @@ class PascalCompilerParser ( Parser ):
         self.enterRule(localctx, 0, self.RULE_pascalProgram)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 52
-            self.match(PascalCompilerParser.KW_PROGRAM)
-            self.state = 53
-            self.match(PascalCompilerParser.IDENTIFIER)
             self.state = 54
-            self.match(PascalCompilerParser.SYM_SEMI)
+            self.match(PascalCompilerParser.KW_PROGRAM)
             self.state = 55
-            self.executionBlock()
+            self.match(PascalCompilerParser.IDENTIFIER)
             self.state = 56
+            self.match(PascalCompilerParser.SYM_SEMI)
+            self.state = 57
+            self.executionBlock()
+            self.state = 58
             self.match(PascalCompilerParser.SYM_DOT)
         except RecognitionException as re:
             localctx.exception = re
@@ -379,9 +391,9 @@ class PascalCompilerParser ( Parser ):
         self.enterRule(localctx, 2, self.RULE_executionBlock)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 58
+            self.state = 60
             self.declSection()
-            self.state = 59
+            self.state = 61
             self.compoundStmt()
         except RecognitionException as re:
             localctx.exception = re
@@ -438,23 +450,23 @@ class PascalCompilerParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 62
+            self.state = 64
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==2:
-                self.state = 61
+                self.state = 63
                 self.constDeclPart()
 
 
-            self.state = 65
+            self.state = 67
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==3:
-                self.state = 64
+                self.state = 66
                 self.varDeclPart()
 
 
-            self.state = 67
+            self.state = 69
             self.subprogramDecls()
         except RecognitionException as re:
             localctx.exception = re
@@ -509,18 +521,18 @@ class PascalCompilerParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 69
+            self.state = 71
             self.match(PascalCompilerParser.KW_CONST)
-            self.state = 71 
+            self.state = 73 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 70
+                self.state = 72
                 self.constDecl()
-                self.state = 73 
+                self.state = 75 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not (_la==57):
+                if not (_la==59):
                     break
 
         except RecognitionException as re:
@@ -583,21 +595,21 @@ class PascalCompilerParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 75
+            self.state = 77
             self.match(PascalCompilerParser.IDENTIFIER)
-            self.state = 76
-            self.match(PascalCompilerParser.OP_EQ)
             self.state = 78
+            self.match(PascalCompilerParser.OP_EQ)
+            self.state = 80
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==33 or _la==34:
-                self.state = 77
+            if _la==35 or _la==36:
+                self.state = 79
                 self.sign()
 
 
-            self.state = 80
+            self.state = 82
             self.constantValue()
-            self.state = 81
+            self.state = 83
             self.match(PascalCompilerParser.SYM_SEMI)
         except RecognitionException as re:
             localctx.exception = re
@@ -652,18 +664,18 @@ class PascalCompilerParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 83
+            self.state = 85
             self.match(PascalCompilerParser.KW_VAR)
-            self.state = 85 
+            self.state = 87 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 84
+                self.state = 86
                 self.varDecl()
-                self.state = 87 
+                self.state = 89 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not (_la==57):
+                if not (_la==59):
                     break
 
         except RecognitionException as re:
@@ -722,13 +734,13 @@ class PascalCompilerParser ( Parser ):
         self.enterRule(localctx, 12, self.RULE_varDecl)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 89
-            self.idList()
-            self.state = 90
-            self.match(PascalCompilerParser.SYM_COLON)
             self.state = 91
-            self.dataType()
+            self.idList()
             self.state = 92
+            self.match(PascalCompilerParser.SYM_COLON)
+            self.state = 93
+            self.dataType()
+            self.state = 94
             self.match(PascalCompilerParser.SYM_SEMI)
         except RecognitionException as re:
             localctx.exception = re
@@ -785,17 +797,17 @@ class PascalCompilerParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 94
+            self.state = 96
             self.match(PascalCompilerParser.IDENTIFIER)
-            self.state = 99
+            self.state = 101
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==44:
-                self.state = 95
+            while _la==46:
+                self.state = 97
                 self.match(PascalCompilerParser.SYM_COMMA)
-                self.state = 96
+                self.state = 98
                 self.match(PascalCompilerParser.IDENTIFIER)
-                self.state = 101
+                self.state = 103
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -862,42 +874,42 @@ class PascalCompilerParser ( Parser ):
         localctx = PascalCompilerParser.DataTypeContext(self, self._ctx, self.state)
         self.enterRule(localctx, 16, self.RULE_dataType)
         try:
-            self.state = 109
+            self.state = 111
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [21]:
+            if token in [23]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 102
+                self.state = 104
                 self.match(PascalCompilerParser.TYPE_INT)
                 pass
-            elif token in [22]:
+            elif token in [24]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 103
+                self.state = 105
                 self.match(PascalCompilerParser.TYPE_REAL)
                 pass
-            elif token in [23]:
+            elif token in [25]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 104
+                self.state = 106
                 self.match(PascalCompilerParser.TYPE_BOOL)
                 pass
-            elif token in [24]:
+            elif token in [26]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 105
+                self.state = 107
                 self.match(PascalCompilerParser.TYPE_CHAR)
                 pass
-            elif token in [25]:
+            elif token in [27]:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 106
+                self.state = 108
                 self.match(PascalCompilerParser.TYPE_LONG)
                 pass
-            elif token in [26]:
+            elif token in [28]:
                 self.enterOuterAlt(localctx, 6)
-                self.state = 107
+                self.state = 109
                 self.match(PascalCompilerParser.TYPE_STRING)
                 pass
             elif token in [20]:
                 self.enterOuterAlt(localctx, 7)
-                self.state = 108
+                self.state = 110
                 self.arrayType()
                 pass
             else:
@@ -975,29 +987,29 @@ class PascalCompilerParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 111
-            self.match(PascalCompilerParser.KW_ARRAY)
-            self.state = 112
-            self.match(PascalCompilerParser.SYM_LBRACKET)
             self.state = 113
+            self.match(PascalCompilerParser.KW_ARRAY)
+            self.state = 114
+            self.match(PascalCompilerParser.SYM_LBRACKET)
+            self.state = 115
             self.idxRange()
-            self.state = 118
+            self.state = 120
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==44:
-                self.state = 114
+            while _la==46:
+                self.state = 116
                 self.match(PascalCompilerParser.SYM_COMMA)
-                self.state = 115
+                self.state = 117
                 self.idxRange()
-                self.state = 120
+                self.state = 122
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 121
-            self.match(PascalCompilerParser.SYM_RBRACKET)
-            self.state = 122
-            self.match(PascalCompilerParser.KW_OF)
             self.state = 123
+            self.match(PascalCompilerParser.SYM_RBRACKET)
+            self.state = 124
+            self.match(PascalCompilerParser.KW_OF)
+            self.state = 125
             self.dataType()
         except RecognitionException as re:
             localctx.exception = re
@@ -1059,27 +1071,27 @@ class PascalCompilerParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 126
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            if _la==33 or _la==34:
-                self.state = 125
-                self.sign()
-
-
             self.state = 128
-            self.constantValue()
-            self.state = 129
-            self.match(PascalCompilerParser.SYM_DOTDOT)
-            self.state = 131
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==33 or _la==34:
-                self.state = 130
+            if _la==35 or _la==36:
+                self.state = 127
                 self.sign()
 
 
+            self.state = 130
+            self.constantValue()
+            self.state = 131
+            self.match(PascalCompilerParser.SYM_DOTDOT)
             self.state = 133
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            if _la==35 or _la==36:
+                self.state = 132
+                self.sign()
+
+
+            self.state = 135
             self.constantValue()
         except RecognitionException as re:
             localctx.exception = re
@@ -1130,9 +1142,9 @@ class PascalCompilerParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 135
+            self.state = 137
             _la = self._input.LA(1)
-            if not(_la==33 or _la==34):
+            if not(_la==35 or _la==36):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -1187,13 +1199,13 @@ class PascalCompilerParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 140
+            self.state = 142
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==14 or _la==15:
-                self.state = 137
+                self.state = 139
                 self.subprogramDecl()
-                self.state = 142
+                self.state = 144
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1253,13 +1265,13 @@ class PascalCompilerParser ( Parser ):
         self.enterRule(localctx, 26, self.RULE_subprogramDecl)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 143
-            self.subprogramHeader()
-            self.state = 144
-            self.match(PascalCompilerParser.SYM_SEMI)
             self.state = 145
-            self.executionBlock()
+            self.subprogramHeader()
             self.state = 146
+            self.match(PascalCompilerParser.SYM_SEMI)
+            self.state = 147
+            self.executionBlock()
+            self.state = 148
             self.match(PascalCompilerParser.SYM_SEMI)
         except RecognitionException as re:
             localctx.exception = re
@@ -1323,41 +1335,41 @@ class PascalCompilerParser ( Parser ):
         self.enterRule(localctx, 28, self.RULE_subprogramHeader)
         self._la = 0 # Token type
         try:
-            self.state = 160
+            self.state = 162
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [14]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 148
+                self.state = 150
                 self.match(PascalCompilerParser.KW_PROCEDURE)
-                self.state = 149
-                self.match(PascalCompilerParser.IDENTIFIER)
                 self.state = 151
+                self.match(PascalCompilerParser.IDENTIFIER)
+                self.state = 153
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==47:
-                    self.state = 150
+                if _la==49:
+                    self.state = 152
                     self.paramList()
 
 
                 pass
             elif token in [15]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 153
+                self.state = 155
                 self.match(PascalCompilerParser.KW_FUNCTION)
-                self.state = 154
-                self.match(PascalCompilerParser.IDENTIFIER)
                 self.state = 156
+                self.match(PascalCompilerParser.IDENTIFIER)
+                self.state = 158
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==47:
-                    self.state = 155
+                if _la==49:
+                    self.state = 157
                     self.paramList()
 
 
-                self.state = 158
+                self.state = 160
                 self.match(PascalCompilerParser.SYM_COLON)
-                self.state = 159
+                self.state = 161
                 self.dataType()
                 pass
             else:
@@ -1425,23 +1437,23 @@ class PascalCompilerParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 162
+            self.state = 164
             self.match(PascalCompilerParser.SYM_LPAREN)
-            self.state = 163
+            self.state = 165
             self.paramGroup()
-            self.state = 168
+            self.state = 170
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==43:
-                self.state = 164
+            while _la==45:
+                self.state = 166
                 self.match(PascalCompilerParser.SYM_SEMI)
-                self.state = 165
+                self.state = 167
                 self.paramGroup()
-                self.state = 170
+                self.state = 172
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 171
+            self.state = 173
             self.match(PascalCompilerParser.SYM_RPAREN)
         except RecognitionException as re:
             localctx.exception = re
@@ -1500,19 +1512,19 @@ class PascalCompilerParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 174
+            self.state = 176
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==3:
-                self.state = 173
+                self.state = 175
                 self.match(PascalCompilerParser.KW_VAR)
 
 
-            self.state = 176
-            self.idList()
-            self.state = 177
-            self.match(PascalCompilerParser.SYM_COLON)
             self.state = 178
+            self.idList()
+            self.state = 179
+            self.match(PascalCompilerParser.SYM_COLON)
+            self.state = 180
             self.dataType()
         except RecognitionException as re:
             localctx.exception = re
@@ -1594,37 +1606,37 @@ class PascalCompilerParser ( Parser ):
         self.enterRule(localctx, 34, self.RULE_designator)
         self._la = 0 # Token type
         try:
-            self.state = 205
+            self.state = 207
             self._errHandler.sync(self)
             la_ = self._interp.adaptivePredict(self._input,20,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 180
+                self.state = 182
                 self.match(PascalCompilerParser.IDENTIFIER)
-                self.state = 194
+                self.state = 196
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,17,self._ctx)
                 while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                     if _alt==1:
-                        self.state = 181
+                        self.state = 183
                         self.match(PascalCompilerParser.SYM_LBRACKET)
-                        self.state = 182
+                        self.state = 184
                         self.expr(0)
-                        self.state = 187
+                        self.state = 189
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
-                        while _la==44:
-                            self.state = 183
+                        while _la==46:
+                            self.state = 185
                             self.match(PascalCompilerParser.SYM_COMMA)
-                            self.state = 184
+                            self.state = 186
                             self.expr(0)
-                            self.state = 189
+                            self.state = 191
                             self._errHandler.sync(self)
                             _la = self._input.LA(1)
 
-                        self.state = 190
+                        self.state = 192
                         self.match(PascalCompilerParser.SYM_RBRACKET) 
-                    self.state = 196
+                    self.state = 198
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,17,self._ctx)
 
@@ -1632,23 +1644,23 @@ class PascalCompilerParser ( Parser ):
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 197
+                self.state = 199
                 self.match(PascalCompilerParser.IDENTIFIER)
-                self.state = 203
+                self.state = 205
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,19,self._ctx)
                 if la_ == 1:
-                    self.state = 198
-                    self.match(PascalCompilerParser.SYM_LPAREN)
                     self.state = 200
+                    self.match(PascalCompilerParser.SYM_LPAREN)
+                    self.state = 202
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & 283869738805755904) != 0):
-                        self.state = 199
+                    if (((_la) & ~0x3f) == 0 and ((1 << _la) & 1135478955223023616) != 0):
+                        self.state = 201
                         self.argList()
 
 
-                    self.state = 202
+                    self.state = 204
                     self.match(PascalCompilerParser.SYM_RPAREN)
 
 
@@ -1707,11 +1719,11 @@ class PascalCompilerParser ( Parser ):
         self.enterRule(localctx, 36, self.RULE_compoundStmt)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 207
-            self.match(PascalCompilerParser.KW_BEGIN)
-            self.state = 208
-            self.stmtList()
             self.state = 209
+            self.match(PascalCompilerParser.KW_BEGIN)
+            self.state = 210
+            self.stmtList()
+            self.state = 211
             self.match(PascalCompilerParser.KW_END)
         except RecognitionException as re:
             localctx.exception = re
@@ -1769,29 +1781,29 @@ class PascalCompilerParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 212
+            self.state = 214
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 144115188076186192) != 0):
-                self.state = 211
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & 576460752310045264) != 0):
+                self.state = 213
                 self.statement()
 
 
-            self.state = 220
+            self.state = 222
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==43:
-                self.state = 214
-                self.match(PascalCompilerParser.SYM_SEMI)
+            while _la==45:
                 self.state = 216
+                self.match(PascalCompilerParser.SYM_SEMI)
+                self.state = 218
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & 144115188076186192) != 0):
-                    self.state = 215
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & 576460752310045264) != 0):
+                    self.state = 217
                     self.statement()
 
 
-                self.state = 222
+                self.state = 224
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -1854,8 +1866,8 @@ class PascalCompilerParser ( Parser ):
 
         def KW_IF(self):
             return self.getToken(PascalCompilerParser.KW_IF, 0)
-        def expr(self):
-            return self.getTypedRuleContext(PascalCompilerParser.ExprContext,0)
+        def log_expr(self):
+            return self.getTypedRuleContext(PascalCompilerParser.Log_exprContext,0)
 
         def KW_THEN(self):
             return self.getToken(PascalCompilerParser.KW_THEN, 0)
@@ -1883,6 +1895,37 @@ class PascalCompilerParser ( Parser ):
                 return visitor.visitChildren(self)
 
 
+    class WritelnStmtContext(StatementContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PascalCompilerParser.StatementContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def KW_WRITELN(self):
+            return self.getToken(PascalCompilerParser.KW_WRITELN, 0)
+        def SYM_LPAREN(self):
+            return self.getToken(PascalCompilerParser.SYM_LPAREN, 0)
+        def SYM_RPAREN(self):
+            return self.getToken(PascalCompilerParser.SYM_RPAREN, 0)
+        def argList(self):
+            return self.getTypedRuleContext(PascalCompilerParser.ArgListContext,0)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterWritelnStmt" ):
+                listener.enterWritelnStmt(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitWritelnStmt" ):
+                listener.exitWritelnStmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWritelnStmt" ):
+                return visitor.visitWritelnStmt(self)
+            else:
+                return visitor.visitChildren(self)
+
+
     class WhileStmtContext(StatementContext):
 
         def __init__(self, parser, ctx:ParserRuleContext): # actually a PascalCompilerParser.StatementContext
@@ -1891,8 +1934,8 @@ class PascalCompilerParser ( Parser ):
 
         def KW_WHILE(self):
             return self.getToken(PascalCompilerParser.KW_WHILE, 0)
-        def expr(self):
-            return self.getTypedRuleContext(PascalCompilerParser.ExprContext,0)
+        def log_expr(self):
+            return self.getTypedRuleContext(PascalCompilerParser.Log_exprContext,0)
 
         def KW_DO(self):
             return self.getToken(PascalCompilerParser.KW_DO, 0)
@@ -2014,6 +2057,37 @@ class PascalCompilerParser ( Parser ):
                 return visitor.visitChildren(self)
 
 
+    class WriteStmtContext(StatementContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a PascalCompilerParser.StatementContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def KW_WRITE(self):
+            return self.getToken(PascalCompilerParser.KW_WRITE, 0)
+        def SYM_LPAREN(self):
+            return self.getToken(PascalCompilerParser.SYM_LPAREN, 0)
+        def SYM_RPAREN(self):
+            return self.getToken(PascalCompilerParser.SYM_RPAREN, 0)
+        def argList(self):
+            return self.getTypedRuleContext(PascalCompilerParser.ArgListContext,0)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterWriteStmt" ):
+                listener.enterWriteStmt(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitWriteStmt" ):
+                listener.exitWriteStmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWriteStmt" ):
+                return visitor.visitWriteStmt(self)
+            else:
+                return visitor.visitChildren(self)
+
+
     class RepeatStmtContext(StatementContext):
 
         def __init__(self, parser, ctx:ParserRuleContext): # actually a PascalCompilerParser.StatementContext
@@ -2027,8 +2101,8 @@ class PascalCompilerParser ( Parser ):
 
         def KW_UNTIL(self):
             return self.getToken(PascalCompilerParser.KW_UNTIL, 0)
-        def expr(self):
-            return self.getTypedRuleContext(PascalCompilerParser.ExprContext,0)
+        def log_expr(self):
+            return self.getTypedRuleContext(PascalCompilerParser.Log_exprContext,0)
 
 
         def enterRule(self, listener:ParseTreeListener):
@@ -2096,45 +2170,45 @@ class PascalCompilerParser ( Parser ):
         self.enterRule(localctx, 40, self.RULE_statement)
         self._la = 0 # Token type
         try:
-            self.state = 273
+            self.state = 287
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,28,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,30,self._ctx)
             if la_ == 1:
                 localctx = PascalCompilerParser.AssignStmtContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 223
-                self.designator()
-                self.state = 224
-                self.match(PascalCompilerParser.SYM_ASSIGN)
                 self.state = 225
+                self.designator()
+                self.state = 226
+                self.match(PascalCompilerParser.SYM_ASSIGN)
+                self.state = 227
                 self.expr(0)
                 pass
 
             elif la_ == 2:
                 localctx = PascalCompilerParser.CompStmtContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 227
+                self.state = 229
                 self.compoundStmt()
                 pass
 
             elif la_ == 3:
                 localctx = PascalCompilerParser.IfStmtContext(self, localctx)
                 self.enterOuterAlt(localctx, 3)
-                self.state = 228
-                self.match(PascalCompilerParser.KW_IF)
-                self.state = 229
-                self.expr(0)
                 self.state = 230
-                self.match(PascalCompilerParser.KW_THEN)
+                self.match(PascalCompilerParser.KW_IF)
                 self.state = 231
+                self.log_expr()
+                self.state = 232
+                self.match(PascalCompilerParser.KW_THEN)
+                self.state = 233
                 self.statement()
-                self.state = 234
+                self.state = 236
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,24,self._ctx)
                 if la_ == 1:
-                    self.state = 232
+                    self.state = 234
                     self.match(PascalCompilerParser.KW_ELSE)
-                    self.state = 233
+                    self.state = 235
                     self.statement()
 
 
@@ -2143,102 +2217,140 @@ class PascalCompilerParser ( Parser ):
             elif la_ == 4:
                 localctx = PascalCompilerParser.WhileStmtContext(self, localctx)
                 self.enterOuterAlt(localctx, 4)
-                self.state = 236
-                self.match(PascalCompilerParser.KW_WHILE)
-                self.state = 237
-                self.expr(0)
                 self.state = 238
-                self.match(PascalCompilerParser.KW_DO)
+                self.match(PascalCompilerParser.KW_WHILE)
                 self.state = 239
+                self.log_expr()
+                self.state = 240
+                self.match(PascalCompilerParser.KW_DO)
+                self.state = 241
                 self.statement()
                 pass
 
             elif la_ == 5:
                 localctx = PascalCompilerParser.ForStmtContext(self, localctx)
                 self.enterOuterAlt(localctx, 5)
-                self.state = 241
-                self.match(PascalCompilerParser.KW_FOR)
-                self.state = 242
-                self.match(PascalCompilerParser.IDENTIFIER)
                 self.state = 243
-                self.match(PascalCompilerParser.SYM_ASSIGN)
+                self.match(PascalCompilerParser.KW_FOR)
                 self.state = 244
-                self.expr(0)
+                self.match(PascalCompilerParser.IDENTIFIER)
                 self.state = 245
+                self.match(PascalCompilerParser.SYM_ASSIGN)
+                self.state = 246
+                self.expr(0)
+                self.state = 247
                 _la = self._input.LA(1)
                 if not(_la==12 or _la==13):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 246
-                self.expr(0)
-                self.state = 247
-                self.match(PascalCompilerParser.KW_DO)
                 self.state = 248
+                self.expr(0)
+                self.state = 249
+                self.match(PascalCompilerParser.KW_DO)
+                self.state = 250
                 self.statement()
                 pass
 
             elif la_ == 6:
                 localctx = PascalCompilerParser.RepeatStmtContext(self, localctx)
                 self.enterOuterAlt(localctx, 6)
-                self.state = 250
-                self.match(PascalCompilerParser.KW_REPEAT)
-                self.state = 251
-                self.stmtList()
                 self.state = 252
-                self.match(PascalCompilerParser.KW_UNTIL)
+                self.match(PascalCompilerParser.KW_REPEAT)
                 self.state = 253
-                self.expr(0)
+                self.stmtList()
+                self.state = 254
+                self.match(PascalCompilerParser.KW_UNTIL)
+                self.state = 255
+                self.log_expr()
                 pass
 
             elif la_ == 7:
                 localctx = PascalCompilerParser.CaseStmtContext(self, localctx)
                 self.enterOuterAlt(localctx, 7)
-                self.state = 255
-                self.match(PascalCompilerParser.KW_CASE)
-                self.state = 256
-                self.expr(0)
                 self.state = 257
+                self.match(PascalCompilerParser.KW_CASE)
+                self.state = 258
+                self.expr(0)
+                self.state = 259
                 self.match(PascalCompilerParser.KW_OF)
-                self.state = 259 
+                self.state = 261 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 while True:
-                    self.state = 258
+                    self.state = 260
                     self.caseItem()
-                    self.state = 261 
+                    self.state = 263 
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 139611614218289152) != 0)):
+                    if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & 558446456873156608) != 0)):
                         break
 
-                self.state = 268
+                self.state = 270
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==8:
-                    self.state = 263
+                    self.state = 265
                     self.match(PascalCompilerParser.KW_ELSE)
-                    self.state = 264
-                    self.statement()
                     self.state = 266
+                    self.statement()
+                    self.state = 268
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
-                    if _la==43:
-                        self.state = 265
+                    if _la==45:
+                        self.state = 267
                         self.match(PascalCompilerParser.SYM_SEMI)
 
 
 
 
-                self.state = 270
+                self.state = 272
                 self.match(PascalCompilerParser.KW_END)
                 pass
 
             elif la_ == 8:
-                localctx = PascalCompilerParser.ProcCallStmtContext(self, localctx)
+                localctx = PascalCompilerParser.WriteStmtContext(self, localctx)
                 self.enterOuterAlt(localctx, 8)
-                self.state = 272
+                self.state = 274
+                self.match(PascalCompilerParser.KW_WRITE)
+                self.state = 275
+                self.match(PascalCompilerParser.SYM_LPAREN)
+                self.state = 277
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & 1135478955223023616) != 0):
+                    self.state = 276
+                    self.argList()
+
+
+                self.state = 279
+                self.match(PascalCompilerParser.SYM_RPAREN)
+                pass
+
+            elif la_ == 9:
+                localctx = PascalCompilerParser.WritelnStmtContext(self, localctx)
+                self.enterOuterAlt(localctx, 9)
+                self.state = 280
+                self.match(PascalCompilerParser.KW_WRITELN)
+                self.state = 281
+                self.match(PascalCompilerParser.SYM_LPAREN)
+                self.state = 283
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & 1135478955223023616) != 0):
+                    self.state = 282
+                    self.argList()
+
+
+                self.state = 285
+                self.match(PascalCompilerParser.SYM_RPAREN)
+                pass
+
+            elif la_ == 10:
+                localctx = PascalCompilerParser.ProcCallStmtContext(self, localctx)
+                self.enterOuterAlt(localctx, 10)
+                self.state = 286
                 self.designator()
                 pass
 
@@ -2299,13 +2411,13 @@ class PascalCompilerParser ( Parser ):
         self.enterRule(localctx, 42, self.RULE_caseItem)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 275
+            self.state = 289
             self.caseLabels()
-            self.state = 276
+            self.state = 290
             self.match(PascalCompilerParser.SYM_COLON)
-            self.state = 277
+            self.state = 291
             self.statement()
-            self.state = 278
+            self.state = 292
             self.match(PascalCompilerParser.SYM_SEMI)
         except RecognitionException as re:
             localctx.exception = re
@@ -2370,33 +2482,33 @@ class PascalCompilerParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 281
+            self.state = 295
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if _la==33 or _la==34:
-                self.state = 280
+            if _la==35 or _la==36:
+                self.state = 294
                 self.sign()
 
 
-            self.state = 283
+            self.state = 297
             self.constantValue()
-            self.state = 292
+            self.state = 306
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==44:
-                self.state = 285
+            while _la==46:
+                self.state = 299
                 self.match(PascalCompilerParser.SYM_COMMA)
-                self.state = 287
+                self.state = 301
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if _la==33 or _la==34:
-                    self.state = 286
+                if _la==35 or _la==36:
+                    self.state = 300
                     self.sign()
 
 
-                self.state = 289
+                self.state = 303
                 self.constantValue()
-                self.state = 294
+                self.state = 308
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
@@ -2458,9 +2570,9 @@ class PascalCompilerParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 295
+            self.state = 309
             _la = self._input.LA(1)
-            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 139611588448485376) != 0)):
+            if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 558446353793941504) != 0)):
                 self._errHandler.recoverInline(self)
             else:
                 self._errHandler.reportMatch(self)
@@ -2521,20 +2633,68 @@ class PascalCompilerParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 297
+            self.state = 311
             self.expr(0)
-            self.state = 302
+            self.state = 316
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while _la==44:
-                self.state = 298
+            while _la==46:
+                self.state = 312
                 self.match(PascalCompilerParser.SYM_COMMA)
-                self.state = 299
+                self.state = 313
                 self.expr(0)
-                self.state = 304
+                self.state = 318
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Log_exprContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def expr(self):
+            return self.getTypedRuleContext(PascalCompilerParser.ExprContext,0)
+
+
+        def getRuleIndex(self):
+            return PascalCompilerParser.RULE_log_expr
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLog_expr" ):
+                listener.enterLog_expr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLog_expr" ):
+                listener.exitLog_expr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitLog_expr" ):
+                return visitor.visitLog_expr(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def log_expr(self):
+
+        localctx = PascalCompilerParser.Log_exprContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 50, self.RULE_log_expr)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 319
+            self.expr(0)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2791,130 +2951,130 @@ class PascalCompilerParser ( Parser ):
         _parentState = self.state
         localctx = PascalCompilerParser.ExprContext(self, self._ctx, _parentState)
         _prevctx = localctx
-        _startState = 50
-        self.enterRecursionRule(localctx, 50, self.RULE_expr, _p)
+        _startState = 52
+        self.enterRecursionRule(localctx, 52, self.RULE_expr, _p)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 314
+            self.state = 330
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [47]:
+            if token in [49]:
                 localctx = PascalCompilerParser.ParensExprContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
 
-                self.state = 306
+                self.state = 322
                 self.match(PascalCompilerParser.SYM_LPAREN)
-                self.state = 307
+                self.state = 323
                 self.expr(0)
-                self.state = 308
+                self.state = 324
                 self.match(PascalCompilerParser.SYM_RPAREN)
                 pass
-            elif token in [33, 34, 41]:
+            elif token in [35, 36, 43]:
                 localctx = PascalCompilerParser.UnaryExprContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 310
+                self.state = 326
                 _la = self._input.LA(1)
-                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 2224793059328) != 0)):
+                if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 8899172237312) != 0)):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 311
+                self.state = 327
                 self.expr(6)
                 pass
-            elif token in [52, 53, 54, 55, 56]:
+            elif token in [54, 55, 56, 57, 58]:
                 localctx = PascalCompilerParser.ConstExprContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 312
+                self.state = 328
                 self.constantValue()
                 pass
-            elif token in [57]:
+            elif token in [59]:
                 localctx = PascalCompilerParser.DesigExprContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 313
+                self.state = 329
                 self.designator()
                 pass
             else:
                 raise NoViableAltException(self)
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 327
+            self.state = 343
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,35,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,37,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    self.state = 325
+                    self.state = 341
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,34,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input,36,self._ctx)
                     if la_ == 1:
                         localctx = PascalCompilerParser.MulDivExprContext(self, PascalCompilerParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 316
+                        self.state = 332
                         if not self.precpred(self._ctx, 5):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
-                        self.state = 317
+                        self.state = 333
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 1065151889408) != 0)):
+                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 4260607557632) != 0)):
                             localctx.op = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 318
+                        self.state = 334
                         self.expr(6)
                         pass
 
                     elif la_ == 2:
                         localctx = PascalCompilerParser.AddSubExprContext(self, PascalCompilerParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 319
+                        self.state = 335
                         if not self.precpred(self._ctx, 4):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
-                        self.state = 320
+                        self.state = 336
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 1125281431552) != 0)):
+                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 4501125726208) != 0)):
                             localctx.op = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 321
+                        self.state = 337
                         self.expr(5)
                         pass
 
                     elif la_ == 3:
                         localctx = PascalCompilerParser.RelExprContext(self, PascalCompilerParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 322
+                        self.state = 338
                         if not self.precpred(self._ctx, 3):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
-                        self.state = 323
+                        self.state = 339
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 8455716864) != 0)):
+                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 33822867456) != 0)):
                             localctx.op = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 324
+                        self.state = 340
                         self.expr(4)
                         pass
 
              
-                self.state = 329
+                self.state = 345
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,35,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,37,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -2929,7 +3089,7 @@ class PascalCompilerParser ( Parser ):
     def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
         if self._predicates == None:
             self._predicates = dict()
-        self._predicates[25] = self.expr_sempred
+        self._predicates[26] = self.expr_sempred
         pred = self._predicates.get(ruleIndex, None)
         if pred is None:
             raise Exception("No predicate with index:" + str(ruleIndex))

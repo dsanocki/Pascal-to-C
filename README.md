@@ -45,6 +45,8 @@ Celem projektu jest stworzenie kompilatora, który tłumaczy kod Pascala na jęz
 | KW_CASE      | `"case"`         | instrukcja wyboru |
 | KW_OF        | `"of"`           | część case/array |
 | KW_ARRAY     | `"array"`        | deklaracja tablicy |
+| KW_WRITE     | `"write"`        | wypisywanie |
+| KW_WRITELN   | `"writeln"`      | wypisywanie z nową linią |
 | TYPE_INT     | `"integer"`      | typ całkowity |
 | TYPE_REAL    | `"real"`         | typ rzeczywisty |
 | TYPE_BOOL    | `"boolean"`      | typ logiczny |
@@ -97,7 +99,7 @@ executionBlock   : declSection compoundStmt ;
 declSection      : constDeclPart? varDeclPart? subprogramDecls ;
 
 constDeclPart    : KW_CONST constDecl+ ;
-constDecl        : IDENTIFIER SYM_EQ sign? constantValue SYM_SEMI ;
+constDecl        : IDENTIFIER OP_EQ sign? constantValue SYM_SEMI ;
 
 varDeclPart      : KW_VAR varDecl+ ;
 varDecl          : idList SYM_COLON dataType SYM_SEMI ;
@@ -125,11 +127,13 @@ stmtList         : statement? (SYM_SEMI statement?)* ;
 statement
     : designator SYM_ASSIGN expr                                        # AssignStmt
     | compoundStmt                                                      # CompStmt
-    | KW_IF expr KW_THEN statement (KW_ELSE statement)?                 # IfStmt
-    | KW_WHILE expr KW_DO statement                                     # WhileStmt
+    | KW_IF log_expr KW_THEN statement (KW_ELSE statement)?                 # IfStmt
+    | KW_WHILE log_expr KW_DO statement                                     # WhileStmt
     | KW_FOR IDENTIFIER SYM_ASSIGN expr (KW_TO | KW_DOWNTO) expr KW_DO statement # ForStmt
-    | KW_REPEAT stmtList KW_UNTIL expr                                  # RepeatStmt
+    | KW_REPEAT stmtList KW_UNTIL log_expr                                  # RepeatStmt
     | KW_CASE expr KW_OF caseItem+ (KW_ELSE statement SYM_SEMI?)? KW_END # CaseStmt
+    | KW_WRITE SYM_LPAREN argList? SYM_RPAREN                           # WriteStmt
+    | KW_WRITELN SYM_LPAREN argList? SYM_RPAREN                         # WritelnStmt
     | designator                                                        # ProcCallStmt
     ;
 
@@ -137,6 +141,10 @@ caseItem         : caseLabels SYM_COLON statement SYM_SEMI ;
 caseLabels       : (sign? constantValue) (SYM_COMMA sign? constantValue)* ;
 constantValue    : INT_NUMBER | REAL_NUMBER | CHAR_LIT | STRING_LIT | BOOL_CONST ;
 argList          : expr (SYM_COMMA expr)* ;
+
+log_expr
+    : expr
+    ;
 
 expr
     : SYM_LPAREN expr SYM_RPAREN                                        # ParensExpr
@@ -169,6 +177,8 @@ KW_UNTIL   : 'until';
 KW_CASE    : 'case';
 KW_OF      : 'of';
 KW_ARRAY   : 'array';
+KW_WRITE   : 'write';
+KW_WRITELN : 'writeln';
 
 TYPE_INT    : 'integer';
 TYPE_REAL   : 'real';
@@ -207,9 +217,9 @@ SYM_COLON    : ':';
 CHAR_LIT    : '\'' ( '\'\'' | ~['\r\n] ) '\'' ;
 STRING_LIT  : '\'' ( '\'\'' | ~['\r\n] )* '\'' ;
 BOOL_CONST  : 'true' | 'false' ;
-REAL_NUMBER : [0-9]+ '.' [0-9]+ ([eE][+-]?[0-9]+)? | [0-9]+ [eE][+-]?[0-9]+ ;
+REAL_NUMBER : [0-9]+ '.' [0-9]+ ([e][+-]?[0-9]+)? | [0-9]+ [e][+-]?[0-9]+ ;
 INT_NUMBER  : [0-9]+ ;
-IDENTIFIER  : [a-zA-Z_] [a-zA-Z0-9_]* ;
+IDENTIFIER  : [a-z_] [a-z0-9_]* ;
 
 COMMENT     : ('{' .*? '}' | '(*' .*? '*)' | '//' ~[\r\n]* ) -> skip ;
 WS          : [ \t\r\n]+ -> skip ;

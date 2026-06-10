@@ -35,11 +35,13 @@ stmtList         : statement? (SYM_SEMI statement?)* ;
 statement
     : designator SYM_ASSIGN expr                                        # AssignStmt
     | compoundStmt                                                      # CompStmt
-    | KW_IF expr KW_THEN statement (KW_ELSE statement)?                 # IfStmt
-    | KW_WHILE expr KW_DO statement                                     # WhileStmt
+    | KW_IF log_expr KW_THEN statement (KW_ELSE statement)?                 # IfStmt
+    | KW_WHILE log_expr KW_DO statement                                     # WhileStmt
     | KW_FOR IDENTIFIER SYM_ASSIGN expr (KW_TO | KW_DOWNTO) expr KW_DO statement # ForStmt
-    | KW_REPEAT stmtList KW_UNTIL expr                                  # RepeatStmt
+    | KW_REPEAT stmtList KW_UNTIL log_expr                                  # RepeatStmt
     | KW_CASE expr KW_OF caseItem+ (KW_ELSE statement SYM_SEMI?)? KW_END # CaseStmt
+    | KW_WRITE SYM_LPAREN argList? SYM_RPAREN                           # WriteStmt
+    | KW_WRITELN SYM_LPAREN argList? SYM_RPAREN                         # WritelnStmt
     | designator                                                        # ProcCallStmt
     ;
 
@@ -47,6 +49,10 @@ caseItem         : caseLabels SYM_COLON statement SYM_SEMI ;
 caseLabels       : (sign? constantValue) (SYM_COMMA sign? constantValue)* ;
 constantValue    : INT_NUMBER | REAL_NUMBER | CHAR_LIT | STRING_LIT | BOOL_CONST ;
 argList          : expr (SYM_COMMA expr)* ;
+
+log_expr
+    : expr
+    ;
 
 expr
     : SYM_LPAREN expr SYM_RPAREN                                        # ParensExpr
@@ -79,6 +85,8 @@ KW_UNTIL   : 'until';
 KW_CASE    : 'case';
 KW_OF      : 'of';
 KW_ARRAY   : 'array';
+KW_WRITE   : 'write';
+KW_WRITELN : 'writeln';
 
 TYPE_INT    : 'integer';
 TYPE_REAL   : 'real';
