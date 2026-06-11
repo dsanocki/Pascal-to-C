@@ -223,3 +223,65 @@ IDENTIFIER  : [a-z_] [a-z0-9_]* ;
 
 COMMENT     : ('{' .*? '}' | '(*' .*? '*)' | '//' ~[\r\n]* ) -> skip ;
 WS          : [ \t\r\n]+ -> skip ;
+```
+
+## Informacje o użytych narzędziach i pakietach
+
+W projekcie wykorzystano:
+
+ANTLR4
+generator parserów i skanerów (lexer + parser)
+zamienia kod Pascala na drzewo składniowe (AST)
+umożliwia przechodzenie po strukturze kodu
+
+### Działanie programu
+
+- wczytuje plik .pas  
+- tworzy drzewo składniowe (parser ANTLR)  
+- wykonuje analizę semantyczną  
+- generuje kod w C  
+- wypisuje wynik w konsoli  
+
+##  Przykład użycia i instrukcja obsługi
+
+### Wejście (Pascal)
+```pascal
+program test;
+
+var
+    x: integer;
+
+function kwadrat(a: integer): integer;
+begin
+    kwadrat := a * a;
+end;
+
+begin
+    x := kwadrat(2);
+end.
+```
+
+### Uruchomienie kompilatora
+Uruchamiamy program na wybranym pliku
+```bash
+python src/main.py examples/test.pas
+```
+
+### Wyjście (C)
+```c
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+
+int x;
+int kwadrat(int a) {
+    return a * a;
+}
+
+int main() {
+    x = kwadrat(2);
+    return 0;
+}
+
+```
+

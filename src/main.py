@@ -1,4 +1,5 @@
 from Translator import *
+from SemanticAnalyzer import *
 import sys
 
 def main():
@@ -20,10 +21,10 @@ def main():
     # Budowanie drzewa od reguły startowej
     try:
         tree = parser.pascalProgram()
-
         translator = PascalToCTranslator()
         wynik_c = translator.visit(tree)
-
+        semantic = SemanticAnalyzer()
+        semantic.visit(tree)
         nazwa_output = nazwa_pliku.replace(".pas", ".c")
 
         with open(nazwa_output, "w", encoding="utf-8") as f2:
@@ -35,6 +36,9 @@ def main():
         f2.close()
 
     except PascalSyntaxError as e:
+        print(e)
+    
+    except PascalSemanticError as e:
         print(e)
 
     except Exception as e:

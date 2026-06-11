@@ -1,0 +1,2 @@
+class PascalSemanticError(Exception):
+    pass
