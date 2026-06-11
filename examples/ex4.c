@@ -15,6 +15,7 @@ int main() {
     }
     while (sum < 100) {
         sum = sum + 10;
+        printf("%d\n", sum);
     }
     return 0;
 }

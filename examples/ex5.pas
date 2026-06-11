@@ -36,4 +36,6 @@ BEGIN
     n := 6;
     resultFact := Factorial(n);
     resultFibo := Fibonacci(n);
+    writeln(resultFact);
+    writeln(resultFibo);
 END.

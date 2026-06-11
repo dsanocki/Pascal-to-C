@@ -38,5 +38,7 @@ int main() {
     n = 6;
     resultFact = Factorial(n);
     resultFibo = Fibonacci(n);
+    printf("%d\n", resultFact);
+    printf("%d\n", resultFibo);
     return 0;
 }

@@ -20,5 +20,6 @@ begin
     while sum < 100 do
     begin
         sum := sum + 10;
+        writeln(sum);
     end;
 end.
