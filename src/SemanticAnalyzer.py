@@ -56,9 +56,7 @@ class SemanticAnalyzer(PascalCompilerVisitor):
 
         return None
 
-    # =========================
     # FUNKCJE / PROCEDURY
-    # =========================
     def visitSubprogramDecl(self, ctx):
         header = ctx.subprogramHeader()
         name = self.norm(header.IDENTIFIER().getText())
@@ -84,15 +82,12 @@ class SemanticAnalyzer(PascalCompilerVisitor):
 
         return None
 
-    # =========================
     # DESIGNATOR (zmienna / wywołanie funkcji)
-    # =========================
     def visitDesignator(self, ctx):
 
         name = self.norm(ctx.getChild(0).getText())
         has_args = ctx.argList() is not None
 
-        # ================= WYWOŁANIE FUNKCJI =================
         if has_args:
             actual = len(ctx.argList().expr()) if ctx.argList() else 0
 
@@ -115,20 +110,16 @@ class SemanticAnalyzer(PascalCompilerVisitor):
 
             return None
 
-        # ================= ZMIENNA =================
         if name in self.variables:
             return None
 
-        # ================= STAŁA =================
         if name in self.constants:
             return None
 
         # jak nic nie pasuje -> błąd
         raise PascalSemanticError(f"Niezadeklarowana zmienna '{name}'")
 
-    # =========================
     # PRZYPISANIE
-    # =========================
     def visitAssignStmt(self, ctx):
 
         name = self.norm(ctx.designator().getChild(0).getText())
@@ -140,8 +131,6 @@ class SemanticAnalyzer(PascalCompilerVisitor):
         # przechodzimy po prawej stronie (walidacja wyrażeń)
         return self.visitChildren(ctx)
 
-    # =========================
     # WYRAŻENIA
-    # =========================
     def visitExpr(self, ctx):
         return self.visitChildren(ctx)

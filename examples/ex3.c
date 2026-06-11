@@ -23,6 +23,9 @@ int main() {
             }
         }
     }
-    printf("%d", MojaTablica[1]);
+    printf("Posortowana tablica:\n");
+    for (i = 1; i <= 5; i++) {
+        printf("%d ", MojaTablica[i]);
+    }
     return 0;
 }

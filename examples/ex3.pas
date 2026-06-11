@@ -23,5 +23,9 @@ begin
       end;
     end;
   end;
-  write(MojaTablica[1])
+  writeln('Posortowana tablica:');
+
+  for i := 1 to 5 do
+    write(MojaTablica[i], ' ');
+  
 end.
